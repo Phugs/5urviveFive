@@ -1,0 +1,88 @@
+
+    #skill-tree {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        cursor: grab;
+    }
+
+    #content {
+        position: absolute;
+        transform: translate(0px, 0px);
+    }
+
+    .skill {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 3px solid white;
+        /* só para manter a largura, cor será trocada dinamicamente */
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 10px #fff4;
+        opacity: 1;
+        /* apagada inicialmente */
+        transition: opacity 0.3s;
+        cursor: default;
+        border-width: 3px;
+        transition: opacity 0.3s, border-color 0.3s;
+    }
+
+    .skill.enabled {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .canvasTree {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* HUD de compra */
+    #buy-hud {
+        position: absolute;
+        background: rgba(30, 30, 30, 0.95);
+        border: 1px solid white;
+        padding: 8px;
+        border-radius: 6px;
+        color: white;
+        width: 180px;
+        font-family: sans-serif;
+        z-index: 10;
+        user-select: none;
+        box-shadow: 0 0 10px #00ffcc;
+    }
+
+    #buy-hud button {
+        margin-top: 8px;
+        width: 100%;
+        padding: 6px;
+        font-weight: bold;
+        background-color: #00cc88;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #buy-hud button:hover {
+        background-color: #00eeaa;
+    }
+
+    #coin-counter {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #111;
+        color: #0f0;
+        padding: 8px 12px;
+        font-family: sans-serif;
+        font-size: 16px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #0f05;
+        z-index: 20;
+    }
